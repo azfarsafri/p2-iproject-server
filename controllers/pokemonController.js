@@ -32,7 +32,6 @@ class Controller {
                 method: "get",
                 url: `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
             })
-            console.log(response.data.results)
             const result = response.data.results
             res.status(200).json(result)
         } catch (err) {

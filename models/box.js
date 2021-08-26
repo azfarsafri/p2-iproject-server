@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Box.init({
-    UserId: DataTypes.INTEGER,
+    TrainerId: DataTypes.INTEGER,
     PokemonId: DataTypes.INTEGER
   }, {
     sequelize,

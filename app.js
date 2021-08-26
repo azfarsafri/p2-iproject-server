@@ -4,12 +4,14 @@ const cors = require("cors")
 const express = require("express")
 const app = express()
 const port = process.env.PORT || 3000
-const errorHandler = require("./middlewares/errorHandler")
+const errorHandler = require("./middlewares/errorHandler");
+// const geoCode = require("./middlewares/geoCode");
 const router = require('./routes/index')
 
 app.use(cors())
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
+// app.use(geoCode.getLocation())
 
 app.use(router)
 
